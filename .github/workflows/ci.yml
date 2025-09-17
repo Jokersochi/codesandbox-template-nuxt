@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 16
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test --ci --reporters=default
+
+      - name: Build
+        run: yarn build
+
+      - name: Generate static
+        run: yarn generate
