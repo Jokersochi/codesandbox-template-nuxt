@@ -1,14 +1,46 @@
-# Nuxt
+# Nuxt 2 Template
 
-This is a [Nuxt](https://nuxtjs.org/) project bootstrapped by [`create-nuxt-app`](https://github.com/nuxt/create-nuxt-app).
+Готовый шаблон проекта на Nuxt 2 (static target) с поддержкой TypeScript, Jest, ESLint и Prettier.
 
-[Configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) has been added to optimize it for [CodeSandbox Projects](https://codesandbox.io/p/dashboard).
+## Требования
 
-[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/codesandbox/codesandbox-template-nuxt/main)
+- Node.js 14+ (рекомендуется LTS)
+- Yarn 1.x
 
-## Resources
+## Установка
 
-- [CodeSandbox Projects — Docs](https://docs.codesandbox.io)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
+```bash
+yarn install
+```
+
+## Скрипты
+
+- `yarn dev` — локальная разработка на `http://localhost:3000`
+- `yarn build` — сборка продакшн-бандла
+- `yarn start` — запуск собранного приложения
+- `yarn generate` — генерация статического сайта в `dist/`
+- `yarn test` — запуск Jest тестов
+- `yarn lint` — проверка ESLint + Prettier
+- `yarn lintfix` — авто-правки форматирования и линтинга
+
+## Структура
+
+- `pages/` — входные страницы приложения (из коробки обновлённая `index.vue`)
+- `components/` — Vue-компоненты (оставлен пример `NuxtLogo.vue`)
+- `store/` — (опционально) Vuex
+- `test/` — тесты для Jest
+
+Удалён демо-компонент `components/Tutorial.vue`.
+
+## Быстрый старт
+
+```bash
+yarn dev
+```
+
+Откройте `pages/index.vue` и начинайте разработку.
+
+## Полезные ссылки
+
+- [Nuxt 2 — Документация](https://nuxtjs.org/docs)
 - [Nuxt — GitHub](https://github.com/nuxt/framework)
-- [Nuxt — Docs](https://nuxtjs.org/docs)
